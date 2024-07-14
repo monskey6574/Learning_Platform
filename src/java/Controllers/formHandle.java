@@ -1,9 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package Controllers;
 
+import DAO.DAO;
+
+
+
+import Model.Person;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -59,8 +60,20 @@ public class formHandle extends HttpServlet {
         String email = request.getParameter("email");
         String pwd = request.getParameter("pwd");
         
-        out.println(fname);
         
+        Person person = new Person();
+        person.setFname(fname);
+        person.setLname(lname);
+        person.setAdrdress(address);
+        person.setGender(gender);
+        person.setDob(dob);
+        person.setEmail(email);
+        person.setPwd(pwd);
+        
+        
+        DAO persondao = new DAO();
+        persondao.saveUser(person);
+       
         
         
         
