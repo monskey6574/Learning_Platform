@@ -1,0 +1,5 @@
+com\lms\itresourses\dao\userDataSave.class
+com\lms\itresourses\JakartaRestConfiguration.class
+com\lms\itresourses\resources\JakartaEE10Resource.class
+com\lms\itresourses\Controllers\userData.class
+com\lms\itresourses\Model\userdata.class
